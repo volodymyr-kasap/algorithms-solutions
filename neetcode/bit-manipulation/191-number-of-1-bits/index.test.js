@@ -13,7 +13,7 @@ test('test 2', () => {
   expect(result).toEqual(1);
 });
 
-test('test 2', () => {
+test('test 3', () => {
   const result = hammingWeight(2147483645);
   expect(result).toEqual(30);
 });
