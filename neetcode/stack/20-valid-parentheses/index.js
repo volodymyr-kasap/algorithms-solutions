@@ -24,6 +24,6 @@ const stackSolution = function(str) {
     return stack.length === 0;
 };
 
-const isValid = bruteForceSolution;
+const isValid = stackSolution;
 
 module.exports = { isValid };
