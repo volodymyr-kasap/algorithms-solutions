@@ -20,5 +20,5 @@ test('flatObjectKeys', () => {
     'a',   'b',   'c',
     'ca',  'cb',  'cc',
     'ccc', 'cbb',
-  ])
+  ]);
 });

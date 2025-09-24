@@ -16,4 +16,4 @@ function isValidParenthesis (str) {
 
 module.exports = {
   isValidParenthesis,
-}
+};

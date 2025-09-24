@@ -4,55 +4,55 @@
  * @return {number}
  */
 
- /*
+/*
  * Time complexity: O(n)
  * Space complexity: O(1)
  */
 const bruteForceSolution = (nums, target) => {
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] === target) return i;
-    }
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === target) return i;
+  }
 
-    return -1;
-}
+  return -1;
+};
 
- /*
+/*
  * Time complexity: O(log n)
  * Space complexity: O(log n)
  */
 const binarySearchRecursiveFind = (arr, target, start, end) => {
-    if (start > end) return -1;
+  if (start > end) return -1;
     
-    const middle = Math.floor((start + end) / 2);
+  const middle = Math.floor((start + end) / 2);
 
-    if (arr[middle] === target) return middle;
+  if (arr[middle] === target) return middle;
 
-    if (arr[middle] > target) return find(arr, target, start, middle - 1);
+  if (arr[middle] > target) return find(arr, target, start, middle - 1);
 
-    if (arr[middle] < target) return find(arr, target, middle + 1, end);
+  if (arr[middle] < target) return find(arr, target, middle + 1, end);
 
-    return -1;
+  return -1;
 };
 
 const binarySearchRecursive = (nums, target) => {
-    return binarySearchRecursiveFind(nums, target, 0, nums.length);
-}
+  return binarySearchRecursiveFind(nums, target, 0, nums.length);
+};
 
 const binarySearcIterative = (nums, target) => {
-    let left = 0;
-    let right = nums.length - 1;
+  let left = 0;
+  let right = nums.length - 1;
 
-    while (left <= right) {
-        const middle = left + Math.floor((right - left) / 2);
-        if (nums[middle] > target) {
-            right = middle - 1;
-        } else if (nums[middle] < target) {
-            left = middle + 1;
-        } else return middle;
-    }
+  while (left <= right) {
+    const middle = left + Math.floor((right - left) / 2);
+    if (nums[middle] > target) {
+      right = middle - 1;
+    } else if (nums[middle] < target) {
+      left = middle + 1;
+    } else return middle;
+  }
 
-    return -1;
-}
+  return -1;
+};
 
 const binarySearch = binarySearcIterative;
 

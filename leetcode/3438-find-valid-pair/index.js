@@ -21,5 +21,5 @@ var findValidPair = function(s) {
     }
   }
 
-  return ''
+  return '';
 };

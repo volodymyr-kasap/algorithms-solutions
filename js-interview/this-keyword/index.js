@@ -7,7 +7,7 @@ const object = {
   printName() {
     console.log(this.name);
   }
-}
+};
 
 object.printName(); // what we will see here
 

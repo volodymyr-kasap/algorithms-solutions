@@ -6,6 +6,6 @@ const findKMax = (arr, k) =>{
   result = arr.splice(0, k);
 
   return result;
-}
+};
 
 console.log(findKMax(arr, 4));

@@ -5,7 +5,7 @@ const {
   isString,
   isSymbol,
   isUndefined,
-} = require('./index')
+} = require('./index');
 
 describe('type-utilities', () => {
   describe('isBoolean', () => {

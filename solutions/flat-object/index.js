@@ -11,8 +11,8 @@ const flatObjectKeys = (obj) => {
   }
 
   return keys;
-}
+};
 
 module.exports = {
   flatObjectKeys,
-}
+};

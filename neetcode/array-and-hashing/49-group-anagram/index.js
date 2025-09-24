@@ -7,14 +7,14 @@ var groupAnagrams = function(strs) {
     return {
       key: x,
       sorted: Array.from(x).sort().join(''),
-    }
+    };
   });
 
-  const hashMap =  filteredStrs.reduce((acc, curr) => {
+  const hashMap = filteredStrs.reduce((acc, curr) => {
     if (!acc[curr.sorted]) acc[curr.sorted] = [];
     acc[curr.sorted].push(curr.key);
     return acc;
-  }, {})
+  }, {});
 
   return Object.values(hashMap);
 };

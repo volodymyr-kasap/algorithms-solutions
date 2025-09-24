@@ -20,4 +20,4 @@ function reverse2 (str) {
 
 module.exports = {
   reverse,
-}
+};

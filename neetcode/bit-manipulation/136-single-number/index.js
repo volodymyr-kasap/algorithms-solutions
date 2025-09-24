@@ -3,11 +3,11 @@
  * @return {number}
  */
 const bitwiseSolutions = function(nums) {
-    let res = 0;
-    for (const num of nums) {
-      res = num ^ res;
-    }
-    return res;
+  let res = 0;
+  for (const num of nums) {
+    res = num ^ res;
+  }
+  return res;
 };
 
 
@@ -22,7 +22,7 @@ const bruteForceSolutions = function(nums) {
     }
     if (flag) return nums[i];
   }
-}
+};
 
 const setSolutions = function(nums) {
   const set = new Set();
@@ -33,7 +33,7 @@ const setSolutions = function(nums) {
   }
 
   return [...set][0];
-}
+};
 
 const singleNumber = bitwiseSolutions;
 

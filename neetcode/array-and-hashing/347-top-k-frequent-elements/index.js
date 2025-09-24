@@ -4,7 +4,7 @@
  * @return {number[]}
  */
 var topKFrequent = function(nums, k) {
-  const hashTable = {}
+  const hashTable = {};
 
   for (let i = 0; i < nums.length; i++) {
     hashTable[nums[i]] = (hashTable[nums[i]] || 0) + 1;
@@ -22,7 +22,7 @@ var topKFrequent = function(nums, k) {
  * @return {number[]}
  */
 var topKFrequentBucket = function(nums, k) {
-  const hashTable = {}
+  const hashTable = {};
   // Create an array of buckets where index = frequency of elements (0 index is unused)
   const bucket = Array.from({ length: nums.length + 1 }, () => []);
 
@@ -49,4 +49,4 @@ var topKFrequentBucket = function(nums, k) {
 
 module.exports = {
   topKFrequent: topKFrequentBucket,
-}
+};

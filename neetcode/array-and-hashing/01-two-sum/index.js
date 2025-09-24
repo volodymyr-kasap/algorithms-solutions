@@ -38,5 +38,5 @@ var twoSum = function(nums, target) {
     numMap[nums[i]] = i;
   }
 
-  return []
+  return [];
 };
