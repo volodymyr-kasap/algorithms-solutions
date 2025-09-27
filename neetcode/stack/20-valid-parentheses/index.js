@@ -11,7 +11,7 @@ const stackSolution = function(str) {
   };
   const stack = [];
 
-  for (const char of s) {
+  for (const char of str) {
     if (char in dictionary) {
       stack.push(char);
     } else {
