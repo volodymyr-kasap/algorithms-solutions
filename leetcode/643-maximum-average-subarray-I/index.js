@@ -22,4 +22,32 @@ var badSolution = function(nums, k) {
   return avg;
 };
 
-module.exports = { findMaxAverage: badSolution };
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ * Time complexity = O(n)
+ * Space complexity = O(1)
+ */
+const solution = function(nums, k) {
+  const getSum = (array, firsIndex, count) => {
+    let sum = 0;
+    for (let i = firsIndex; i < firsIndex + count; i++) {
+      sum += array[i];
+    }
+    return sum;
+  };
+
+  let best = getSum(nums, 0, k);
+  let currentSum = best;
+
+  for (let i = 1; i <= nums.length - k; i++) {
+    currentSum = currentSum + nums[i - 1 + k] - nums[i - 1];
+    if (currentSum > best) best = currentSum;
+  }
+
+  return best / k;
+};
+
+module.exports = { findMaxAverage: solution };

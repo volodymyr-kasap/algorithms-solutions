@@ -35,4 +35,10 @@ describe('findMaxAverage', () => {
     const nums = Array(1000).fill(1);
     expect(findMaxAverage(nums, 1000)).toBe(1);
   });
+
+
+  test('test 1', () => {
+    const nums =[0,1,1,3,3];
+    expect(findMaxAverage(nums, 4)).toBe(2);
+  });
 });
