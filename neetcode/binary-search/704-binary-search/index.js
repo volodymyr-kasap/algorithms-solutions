@@ -22,14 +22,14 @@ const bruteForceSolution = (nums, target) => {
  */
 const binarySearchRecursiveFind = (arr, target, start, end) => {
   if (start > end) return -1;
-    
+  
   const middle = Math.floor((start + end) / 2);
 
   if (arr[middle] === target) return middle;
 
-  if (arr[middle] > target) return find(arr, target, start, middle - 1);
+  if (arr[middle] > target) return binarySearchRecursiveFind(arr, target, start, middle - 1);
 
-  if (arr[middle] < target) return find(arr, target, middle + 1, end);
+  if (arr[middle] < target) return binarySearchRecursiveFind(arr, target, middle + 1, end);
 
   return -1;
 };
@@ -38,7 +38,7 @@ const binarySearchRecursive = (nums, target) => {
   return binarySearchRecursiveFind(nums, target, 0, nums.length);
 };
 
-const binarySearcIterative = (nums, target) => {
+const binarySearchIterative = (nums, target) => {
   let left = 0;
   let right = nums.length - 1;
 
@@ -54,6 +54,6 @@ const binarySearcIterative = (nums, target) => {
   return -1;
 };
 
-const binarySearch = binarySearcIterative;
+const binarySearch = binarySearchIterative;
 
 module.exports = { binarySearch };
