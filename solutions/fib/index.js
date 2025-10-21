@@ -17,8 +17,10 @@ function fibonacciRecursive(num) {
 }
 
 function fibonacciMemo(num, memo = {}) {
-  if (num <= 1) return 1;
+  if (num <= 2) return 1;
   if (memo[num]) return memo[num];
 
-  return memo[num] = fibonacciMemo(num - 1, memo) + fibonacciMemo(num - 2, memo);
+  memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo);
+
+  return memo[n];
 }
